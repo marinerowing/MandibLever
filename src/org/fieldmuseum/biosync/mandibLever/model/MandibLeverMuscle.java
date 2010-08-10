@@ -100,7 +100,7 @@ public class MandibLeverMuscle extends Muscle {
 
         //locate the origin of the muscle
         double jointAngle = TriangleCalc.getAngleAB(jointToInsertion, originToJoint, originToInsertion); //the angle at the joint
-        double inputAngle = Math.atan(muscleInsertion.getY()/muscleInsertion.getX()); //the angle of the joint-to-insertion member to horizontal
+        double inputAngle = Math.atan2(muscleInsertion.getY(),muscleInsertion.getX()); //the angle of the joint-to-insertion member to horizontal
         double originAngle = jointAngle + inputAngle;  //The angle at the joint from horizontal to the origin of the a2
         double x = qaJoint.getX() + originToJoint * Math.cos(originAngle);
         double y = qaJoint.getY() + originToJoint * Math.sin(originAngle);
