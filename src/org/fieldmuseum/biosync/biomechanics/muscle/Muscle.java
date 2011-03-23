@@ -141,7 +141,7 @@ public class Muscle extends PlasticBar implements Serializable {
 	 * @return the resting length of the pennate muscle fibers, in cm
 	 */
 	public double getFiberLength() {
-		return Math.cos(getPennationAngle()) * getRestingLength() - getTendonLength();
+		return Math.cos(getPennationAngle()) * (getRestingLength() - getTendonLength());
 	}
 	
 	/**
